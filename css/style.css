@@ -19,6 +19,7 @@ main {
 nav a {
     font-weight: 500;
     display: block;
+    text-decoration: none;
 }
 
 
@@ -59,18 +60,8 @@ img.block {
 
 img.hero {
     object-fit: contain;
-/*
-    max-width:100%;
-    max-height:100%;
-*/
-/*    height: auto;*/
     max-height: 600px;
     width: 100%;
-/*
-    margin: 0;
-    padding: 0;
-    border: 0;
-*/
 }
 
 .hero_container {
