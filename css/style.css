@@ -53,7 +53,8 @@ img.full_width {
 }
 
 img.block {
-    
+    display: inline-block;
+    width: 300px;
 }
 
 img.hero {
