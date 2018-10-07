@@ -21,9 +21,11 @@ main {
     padding: 0% 10%;
     margin: auto;
     max-width: 700px;
-    padding-bottom: 100px;  /*  this is for footer to breather  */
-    
-/*    new experiment:     ;*//*
+    padding-bottom: 100px;
+    /*  this is for footer to breather  */
+
+    /*    new experiment:     ;*/
+    /*
     background-color: white;
     border: solid 10px white;
     position: relative;
@@ -36,13 +38,13 @@ main {
     overflow: hidden;
     max-height: 50vh;
     z-index: -2;
-/*    width: 100vw;*/
+    /*    width: 100vw;*/
     /*        border:5px solid*/
 }
 
 img.hero {
-/*    object-fit: contain;*/
-    position:  relative;
+        object-fit: contain;
+    position: relative;
     bottom: 8vw;
     transform: scale(1.1);
     display: block;
@@ -73,13 +75,13 @@ footer {
 
 .footer-icons a {
     color: white;
-/*    display: none;*/
+    /*    display: none;*/
 }
 
 
 
 .footer-icons {
-/*    background-color: aqua;*/
+    /*    background-color: aqua;*/
     color: white;
     width: 50%;
     max-width: 600px;
@@ -89,7 +91,7 @@ footer {
 }
 
 footer i {
-/*    display: block;*/
+    /*    display: block;*/
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -121,7 +123,7 @@ h1 {
 
 h2 {
     margin: 35px 0px 5px;
-    padding: 0px 0px 5px 0px ;
+    padding: 0px 0px 5px 0px;
     text-transform: uppercase;
     font-weight: 700;
     color: #1873b5;
@@ -131,14 +133,14 @@ h2 {
 h3 {
     text-transform: uppercase;
     color: #b4dcff;
-/*    background-color: rgba(24, 115, 181, 0.32);*/
+    /*    background-color: rgba(24, 115, 181, 0.32);*/
     margin: 0;
     padding: 0px 10% 15px;
 }
 
 p {
     margin: 0;
-    padding: 5px 0px 20px 0px;  
+    padding: 5px 0px 20px 0px;
 }
 
 
@@ -155,7 +157,7 @@ p {
 nav {
     background-color: hsl(205, 56%, 53%);
     padding: 1px 0px;
-    
+
 }
 
 nav ul {
@@ -214,13 +216,13 @@ nav a:hover {
     h2 {
         text-align: center;
     }
-    
+
     img.hero {
-        position:  relative;
+        position: relative;
         bottom: -2vw;
 
     }
-    
+
 
 }
 
@@ -234,20 +236,20 @@ nav a:hover {
         flex-wrap: wrap;
         margin: 12px 2px;
     }
-    
+
     nav li {
         margin: 5px;
     }
-    
+
     footer {
         font-size: 0.7rem;
     }
-    
+
     footer i {
         padding-top: 7px;
         padding-bottom: 7px;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
@@ -263,7 +265,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom left,rgba(22, 118, 187, 0.73), rgba(13, 134, 222, 0.28), transparent), url('/images/hero.jpg') center center no-repeat;
+    background: linear-gradient(to bottom left, rgba(22, 118, 187, 0.73), rgba(13, 134, 222, 0.28), transparent), url('/images/hero.jpg') center center no-repeat;
     background-size: cover;
 }
 
@@ -281,19 +283,53 @@ nav a:hover {
 }
 
 .bg-image-maps:after {
-  content: "";
-background: url('/images/locations/flint1.jpg') center center no-repeat; background-size: cover;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
+    content: "";
+    background: url('/images/locations/flint1.jpg') center center no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 
 
+/* in action page*/
+
+.grid-container {
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+/*    background-color: #2196F3;*/
+/*      padding: 10px;*/
+}
+
+.grid-item {
+    background-color: #02528c;
+/*    border: 1px solid rgba(0, 0, 0, 0.8);*/
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.grid-item img {
+    max-height: 250px;
+/*    max-height: 200px;*/
+    
+    transition: transform .2s;
+    object-fit: cover;
+}
+
+.grid-container img:hover {
+    transform: scale(1.15) rotate(5deg) ;    
+}
 
 .instagram {
     margin: auto;
@@ -308,9 +344,3 @@ background: url('/images/locations/flint1.jpg') center center no-repeat; backgro
     display: inline-block;
     width: 300px;
 }
-
-
-
-
-
-
