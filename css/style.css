@@ -3,8 +3,8 @@
 /* body styles  */
 
 body {
-/*    font-family: avenir;*/
-    font-family: 'Roboto', sans-serif;
+    font-family: avenir;
+/*    font-family: 'Roboto', sans-serif;*/
     margin: 0px;
     background-color: #eefaff;
     overflow-y: scroll;
@@ -160,11 +160,16 @@ p {
 nav {
     background-color: hsl(205, 56%, 53%);
     padding: 1px 0px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
 
 }
 
 nav ul {
-    /*    position: fixed;     if you want it sticky */
+    /*    position: sticky;     if you want it sticky */
     display: flex;
     justify-content: center;
     padding: 0 10%;
@@ -303,6 +308,7 @@ nav a:hover {
 /* in action page*/
 
 .grid-container {
+    padding-top: 5px;
     padding-bottom: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
