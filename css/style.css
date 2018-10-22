@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
+/* ---------- GENERAL STYLES ----------  */
+
+header h1 {    
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f8fdff;
+    margin: 0;
+    padding: 10px 0px 10px;
+}
+
+header p {
+    text-transform: uppercase;
+    color: #b4dcff;
+    margin: 0;
+    padding: 0px 10% 15px;
+    font-weight: 300;
+
+}
+
+img.fill {
+    width: 100%;
+}
 
 /* ---------------------------------  
               index.html      
@@ -59,9 +82,9 @@ main ul {
 }
 
 img.hero {
-        object-fit: contain;
+    object-fit: contain;
     position: relative;
-    bottom: 8vw;
+    bottom: 3vw;
     transform: scale(1.1);
     display: block;
     width: 100%;
@@ -76,66 +99,8 @@ img.hero:hover {
 
 
 
-/* ---------- styling footer ---------- */
-
-footer {
-    color: white;
-    background-color: #1873b5;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-icons a {
-    color: white;
-    /*    display: none;*/
-}
-
-
-
-.footer-icons {
-    /*    background-color: aqua;*/
-    color: white;
-    width: 50%;
-    max-width: 600px;
-    min-width: 250px;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer i {
-    /*    display: block;*/
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-footer i:hover {
-    background-color: #02528c;
-}
-
-.test-link {
-    text-align: center;
-    color: aliceblue;
-    width: 100%;
-}
-
-
 
 /* text */
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #f8fdff;
-    margin: 0;
-    padding: 10px 0px 10px;
-}
 
 h2 {
     margin: 35px 0px 5px;
@@ -144,14 +109,6 @@ h2 {
     font-weight: 700;
     color: #1873b5;
     border-bottom: 3px solid #6ec6ec;
-}
-
-h3 {
-    text-transform: uppercase;
-    color: #b4dcff;
-    /*    background-color: rgba(24, 115, 181, 0.32);*/
-    margin: 0;
-    padding: 0px 10% 15px;
 }
 
 p {
@@ -166,7 +123,7 @@ p {
 
 /* ---------- Nav bar styling ----------*/
 nav {
-    background-color: hsl(205, 56%, 53%);
+    background-color: #1873b5;
     padding: 1px 0px;
 /*    Safari */
     position: -webkit-sticky;  
@@ -221,6 +178,57 @@ nav a:hover {
 }
 
 
+/* ---------- styling footer ---------- */
+
+footer {
+    color: white;
+    background-color: #1873b5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons a {
+    color: white;
+    /*    display: none;*/
+}
+
+
+
+.footer-icons {
+    /*    background-color: aqua;*/
+    color: white;
+    width: 50%;
+    max-width: 600px;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer i {
+    /*    display: block;*/
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+footer i:hover {
+    background-color: #02528c;
+}
+
+.test-link {
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+}
+
+
+
+
 
 
 
@@ -229,13 +237,23 @@ nav a:hover {
   --------------------------------- */
 .bg-image-calendar {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom left, rgba(22, 118, 187, 0.73), rgba(13, 134, 222, 0.28), transparent), url('../images/hero.jpg') center center no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom left, rgba(22, 118, 187, 0.73), rgba(0, 82, 142, 0.62), transparent), url('../images/hero.jpg') center center no-repeat;
     background-size: cover;
 }
 
+.google-cal {
+    padding: 20px 0px
+}
 
+main.bg-image h2 {
+    color: white;
+}
+
+main.bg-image p {
+    color: white;
+}
 
 /* ---------------------------------  
             maps.html      
@@ -328,17 +346,11 @@ nav a:hover {
   --------------------------------- */
 
 @media screen and (max-width:768px) {
-    header {
-        padding: 5%;
-    }
     
     nav {
         background-color: #ffce00;
     }
 
-    .hero {
-        transform: scale(1.2);
-    }
 
     h2 {
         text-align: center;
@@ -346,7 +358,7 @@ nav a:hover {
 
     img.hero {
         position: relative;
-        bottom: -2vw;
+        bottom: -2.5vw;
 
     }
 
