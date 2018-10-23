@@ -77,7 +77,7 @@ main ul {
 
 .hero_container {
     overflow: hidden;
-    max-height: 50vh;
+    max-height: 43vh;
     z-index: -2;
     background: linear-gradient(to bottom left, rgb(187, 22, 22), rgb(0, 147, 255));
     
@@ -89,7 +89,7 @@ main ul {
 img.hero {
     object-fit: contain;
     position: relative;
-    bottom: 3vw;
+    bottom: 9vw;
     transform: scale(1.1);
     display: block;
     width: 100%;    
@@ -454,8 +454,8 @@ main.bg-image p {
         padding-bottom: 7px;
     }
 
-    h1 {
-        font-size: 2rem;
+    header h1 {
+        font-size: 1.8rem;
     }
 
 }
