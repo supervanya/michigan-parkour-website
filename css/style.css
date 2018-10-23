@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
 header {
     text-align: center;
     background-color: rgb(24, 115, 181);
+    padding: 15px;
 }
 
 main {
