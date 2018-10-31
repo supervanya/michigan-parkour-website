@@ -21,6 +21,13 @@ header p {
 
 }
 
+p {
+}
+
+ul {
+    padding: 0 10px;
+}
+
 img.fill {
     width: 100%;
 }
@@ -32,6 +39,24 @@ img.fill {
 
 
 /* ---------- body styles ----------  */
+
+aside {
+    position: fixed;
+    left: 0px;
+    bottom: 2vh;
+    width: 142px;
+/*    background-color: white;*/
+    padding: 38px;
+}
+
+aside ul {
+    display: block;
+}
+
+aside li a {
+/*    text-decoration: none;*/
+    color: #3f6b8a;
+}
 
 body {
     font-family: avenir;
@@ -55,7 +80,7 @@ header {
 main {
     padding: 0% 10%;
     margin: auto;
-    max-width: 700px;
+    max-width: 600px;
     padding-bottom: 100px;
     /*  this is for footer to breather  */
 
@@ -71,6 +96,8 @@ main {
 
 main ul {
     margin-top: 0;
+    padding-left: 40px;
+    margin-bottom: 15px;
 }
 
 
@@ -107,6 +134,10 @@ img.hero:hover {
 
 /* text */
 
+h1 {
+    font-size: 1rem;
+}
+
 h2 {
     margin: 35px 0px 5px;
     padding: 0px 0px 5px 0px;
@@ -129,7 +160,7 @@ p {
 /* ---------- Nav bar styling ----------*/
 nav {
     background-color: #1873b5;
-    padding: 1px 0px;
+    padding: 9px 0px;
 /*    Safari */
     position: -webkit-sticky;  
     position: sticky;
@@ -380,6 +411,15 @@ main.bg-image p {
             media querries      
   --------------------------------- */
 
+/* not widescreen break point */
+@media screen and (max-width:1000px) {
+    
+    aside {
+        display: none;
+    }
+    
+}
+
 /* tablet break point */
 @media screen and (max-width:768px) {
     
@@ -468,4 +508,11 @@ main.bg-image p {
         font-size: 1.8rem;
     }
 
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transform: none !important;
+  }
 }
