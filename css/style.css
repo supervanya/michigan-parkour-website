@@ -63,8 +63,7 @@ aside li a {
 }
 
 body {
-    font-family: avenir;
-/*    font-family: 'Roboto', sans-serif;*/
+    font-family: 'Roboto', sans-serif, avenir;
     margin: 0px;
     background-color: #eefaff;
     overflow-y: scroll;
