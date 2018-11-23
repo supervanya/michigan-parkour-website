@@ -41,16 +41,20 @@ img.fill {
 /* ---------- body styles ----------  */
 
 aside {
-    position: fixed;
-    left: 0px;
-    bottom: 2vh;
-    width: 142px;
+    position: sticky;
+/*    left: 0px;*/
+    top: 70px;
+    left: 5px;
+    width: 132px;
+    z-index: 0;
 /*    background-color: white;*/
-    padding: 38px;
+    padding-left: 40px;
+    margin-bottom: -250px;
 }
 
 aside ul {
     display: block;
+    
 }
 
 aside li a {
@@ -104,7 +108,7 @@ main ul {
 .hero_container {
     overflow: hidden;
     max-height: 43vh;
-    z-index: -2;
+     z-index: 2;
     background: linear-gradient(to bottom left, rgb(187, 22, 22), rgb(0, 147, 255));
     
     
@@ -120,6 +124,7 @@ img.hero {
     display: block;
     width: 100%;    
     opacity: 0.6;
+    z-index: 2;
     transition: transform .2s;
 }
 
@@ -136,6 +141,7 @@ img.hero:hover {
 
 h1 {
     font-size: 1rem;
+    
 }
 
 h2 {
@@ -145,6 +151,11 @@ h2 {
     font-weight: 700;
     color: #1873b5;
     border-bottom: 3px solid #6ec6ec;
+}
+
+h2:target {
+  padding-top: 65px; 
+  margin-top: -50px;
 }
 
 p {
