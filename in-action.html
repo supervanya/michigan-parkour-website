@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
+    
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="css/lightbox.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        main {
+            max-width: 900px;
+        }
+    </style>
+    
     <title>Showreel | Michigan Parkour</title>
 </head>
 
 <body>
+  <a class="skipnav" tabindex='1' href="#main">Skip to Content (Press Enter)</a>
+   
     <nav>
         <ul>
             <li><a href="index.html">About us</a></li>
@@ -28,31 +42,34 @@
     </header>
 
     <main>
-        <section class="instagram">
-
-            <h2>What do we even do?</h2>
-            <p>The purpose of Michigan Parkour is to creatively explore and engage with our urban environment, develop our individual physical and mental capabilities to the best of our ability, and communicate to the society at large a better understanding of what Parkour truly means and represents as a movement discipline.
-            </p>
-            <h2>Training approach</h2>
-            <p>No, we do not "jump of walls and rooftops" all day long. We are very methodical in our aproach to training and for the most part work to perfect our reflexes dozens of times on the ground before we take it even 5 inches high. Repetition, wise repetition, as Vanya (our past president) would say.
-            </p>
+        <section  class="instagram">
+            <div style="max-width: 700px; margin: auto;" > 
+                <h2 id="main" tabindex='0'>What do we even do?</h2>
+                <p>The purpose of Michigan Parkour is to creatively explore and engage with our urban environment, develop our individual physical and mental capabilities to the best of our ability, and communicate to the society at large a better understanding of what Parkour truly means and represents as a movement discipline.
+                </p>
+                <h2 tabindex='0'>Training approach</h2>
+                <p>No, we do not "jump of walls and rooftops" all day long. We are very methodical in our aproach to training and for the most part work to perfect our reflexes dozens of times on the ground before we take it even 5 inches high. Repetition, wise repetition, as Vanya (our past president) would say.
+                </p>
+            </div>
             
-            <img class="full_width" src="images/gallery/wallrun-dental.jpg" alt="parkour practitioners running up to the top of the wall">
+           <a data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" href="images/gallery/wallrun-dental.jpg"> <img class="full_width" src="images/gallery/wallrun-dental.jpg" alt="parkour practitioners running up to the top of the wall"></a>
 
             <div class="grid-container">
-                <div class="grid-item"><img src="images/grid/1.jpg" alt="leaders talking to beginners"></div>
-                <div class="grid-item"><img src="images/grid/2.jpg" alt="athletes balancing on the reails"></div>
-                <div class="grid-item"><img src="images/grid/3.jpg" alt="leaders standing at the festifall"></div>
-                <div class="grid-item"><img src="images/grid/4.jpg" alt="parkour person jumping"></div>
-                <div class="grid-item"><img src="images/grid/5.jpg" alt="an athlete flipping"></div>
-                <div class="grid-item"><img src="images/grid/6.jpg" alt="athletes posing in front of the cedar point"></div>
+                <a href="images/grid/1.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/grid/1.jpg" alt="leaders talking to beginners"></a>
+                <a href="images/grid/2.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/grid/2.jpg" alt="athletes balancing on the reails"></a>
+                <a href="images/grid/3.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/grid/3.jpg" alt="leaders standing at the festifall"></a>
+                <a href="images/hero.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/hero.jpg" alt="parkour person jumping"></a>
+                <a href="images/grid/5.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/grid/5.jpg" alt="an athlete flipping"></a>
+                <a href="images/grid/6.jpg" data-lightbox="parkour-slideshow" data-title="Michigan Parkour in action" class="grid-item"><img src="images/grid/6.jpg" alt="athletes posing in front of the cedar point"></a>
             </div>
 
-<!--
+            <a data-lightbox="parkour-slideshow" data-title="parkour practitioners are in a pushup circle" href="images/gallery/pushup-circle.jpg"><img class="full_width" src="images/gallery/pushup-circle.jpg" alt="parkour practitioners are in a pushup circle"></a>
 
-             LightWidget WIDGET 
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/4f427617a1f654bdb655f252bc0a693e.html" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+            <!-- LightWidget -->
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="//lightwidget.com/widgets/4f427617a1f654bdb655f252bc0a693e.html" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
+           <!-- Pixlee -->
             <div id="pixlee_container"></div>
             <script type="text/javascript">
                 window.PixleeAsyncInit = function() {
@@ -65,9 +82,6 @@
                 };
             </script>
             <script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
--->
-
-            <img class="full_width" src="images/gallery/pushup-circle.jpg" alt="parkour practitioners are in a pushup circle">
 
 
         </section>
@@ -80,7 +94,12 @@
             <a class="test-link" href="https://twitter.com/michiganparkour" aria-label='instagram link'><i class="fab fa-twitter-square fa-2x"></i></a>
         </div>
     </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/lightbox.js"></script>
 
+
+    
 </body>
 
 </html>

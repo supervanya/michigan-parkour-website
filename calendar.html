@@ -2,6 +2,9 @@
 <html lang="en" class="calendar">
 <head>
     <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
+    
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -11,7 +14,9 @@
     <title>Calendar | Michigan Parkour</title>
 </head>
 
-<body class='bg-image-calendar'>
+<body id='calendar' class='bg-image-calendar'>
+  <a class="skipnav" tabindex='1' href="#main">Skip to Content (Press Enter)</a>
+      
     <nav>
         <ul>
             <li><a href="index.html">About us</a></li>
@@ -27,12 +32,16 @@
     
     <main class="bg-image">
         <section class="google-cal">
-        <h2>Schedule</h2>
-        <p> Explore our training times and feel free to add them to your calendar</p>
+        <h2 id="main" tabindex='0'>Schedule</h2>
+        <p> Explore our training times and feel free to add them to your calendar.</p>
+       <p>We hold regular practices every week even during the winter. Stop by, say hi! </p>
+        <ul>
+            <li>Tuesday, Thursdays - 5pm</li>
+            <li>Sundays - 4pm</li>
+        </ul>
+        <p><b>Tuesday, Thursdays at 5pm and Sundays at 4pm</b> starting at the <a href="https://goo.gl/maps/CoVIm">Dental School</a> courtyard area. Our practices include conditioning, learning techniques and a community atmosphere. To learn about additional practices, contact the leader of the organization or attend one of the regular practices.</p>
             <iframe class="calendar-desktop" scrolling='no' src="https://calendar.google.com/calendar/embed?showPrint=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=michigan.jam%40gmail.com&amp;color=%23fecc66&amp;ctz=America%2FNew_York" height="600"></iframe>
             <iframe class="calendar-mobile" scrolling='no' src="https://calendar.google.com/calendar/embed?showPrint=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=michigan.jam%40gmail.com&amp;color=%23fecc66&amp;ctz=America%2FNew_York" height="600"></iframe>
-            
-            
         </section>
     </main>
     

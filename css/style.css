@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 /* ---------- GENERAL STYLES ----------  */
@@ -32,6 +32,39 @@ img.fill {
     width: 100%;
 }
 
+
+
+.skipnav:not(:focus) {
+    position: absolute;
+/*    left: -1000em;*/
+/*    top:0;*/
+    
+}
+
+.skipnav:focus {
+    color: purple;
+    background: pink;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    padding: inherit;
+    z-index: 100;
+    display: block;
+
+}
+
+*:focus {
+    box-sizing: border-box;
+    background: pink;
+    color: purple;
+    box-shadow: 0 0 5px rgb(255, 14, 246);
+/*    outline: none;*/
+
+}
+
+
+/*    visibility: hidden;*/
+
 /* ---------------------------------  
               index.html      
   --------------------------------- */
@@ -63,7 +96,7 @@ aside li a {
 }
 
 body {
-    font-family: 'Roboto', sans-serif, avenir;
+    font-family: avenir, 'Lato', 'Roboto', sans-serif;
     margin: 0px;
     background-color: #eefaff;
     overflow-y: scroll;
@@ -105,26 +138,29 @@ main ul {
 
 
 .hero_container {
-    overflow: hidden;
-    max-height: 43vh;
+/*    object-fit: contain;*/
+     overflow: hidden;
+    max-height: 60vh;
      z-index: 2;
     background: linear-gradient(to bottom left, rgb(187, 22, 22), rgb(0, 147, 255));
-    
-    
-    /*    width: 100vw;*/
-    /*        border:5px solid*/
+/* default value: image is centered*/
+/*    object-position: 50% 50%; */
+    /* positioned top left of the content box */
+    object-position: 40% 40%; 
+
+/*     border:5px solid*/
 }
 
 img.hero {
-    object-fit: contain;
-    position: relative;
-    bottom: 9vw;
+    object-fit: cover;
     transform: scale(1.1);
     display: block;
     width: 100%;    
     opacity: 0.6;
     z-index: 2;
     transition: transform .2s;
+    height: 50vh;
+    object-position: 50% 24%;
 }
 
 img.hero:hover {
@@ -144,6 +180,7 @@ h1 {
 }
 
 h2 {
+    font-size: 1.3rem;
     margin: 35px 0px 5px;
     padding: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -171,7 +208,6 @@ p {
 nav {
     background-color: #1873b5;
     padding: 9px 0px;
-/*    Safari */
     position: -webkit-sticky;  
     position: sticky;
     top: 0;
@@ -181,7 +217,6 @@ nav {
 }
 
 nav ul {
-    /*    position: sticky;     if you want it sticky */
     display: flex;
     justify-content: center;
     padding: 0 10%;
@@ -284,20 +319,13 @@ footer i:hover {
 .bg-image-calendar {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom left, rgba(22, 118, 187, 0.73), rgba(0, 82, 142, 0.62), transparent), url('../images/hero.jpg') center center no-repeat;
+/*    height: 100vh;*/
+    background: linear-gradient(to bottom left, rgba(9, 50, 78, 0.85), rgba(0, 105, 183, 0.88), #002242b8), url(../images/hero.jpg) center center no-repeat;
     background-size: cover;
 }
 
-.google-cal {
-    padding: 20px 0px
-}
 
-main.bg-image h2 {
-    color: white;
-}
-
-main.bg-image p {
+main.bg-image h2,main.bg-image p,main.bg-image a,main.bg-image ul {
     color: white;
 }
 
@@ -340,8 +368,10 @@ main.bg-image p {
 .bg-image-maps {
     position: relative;
     width: 100vw;
-    background: linear-gradient(to bottom left, rgba(0, 55, 95, 0.85), rgba(0, 86, 149, 0.97), transparent), url('../images/locations/flint1.jpg') center center no-repeat;
+    background: linear-gradient(to bottom left, rgba(16, 98, 156, 0.85), rgba(0, 105, 183, 0.88), #002242b8),url('../images/locations/flint1.jpg') center center no-repeat;
     background-size: cover;
+    
+
 }
 
 .bg-image-maps:after {
@@ -362,7 +392,7 @@ main.bg-image p {
 /* ---------------------------------  
             in-action.html      
   --------------------------------- */
-.grid-container {
+.grid-container {    
     padding-top: 5px;
     padding-bottom: 10px;
     display: grid;
@@ -380,15 +410,16 @@ main.bg-image p {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
+    max-height: 250px;
+    
     
 }
 
-.grid-item img {
-    max-height: 250px;
-/*    max-height: 200px;*/
-    
+.grid-item img {    
     transition: transform .2s;
     object-fit: cover;
+    max-width: 404px;
 }
 
 .grid-container img:hover {
@@ -411,8 +442,13 @@ main.bg-image p {
 
 
 
+div .tap2shop_frame {
+    display: none !important;
+}
 
-
+#pixlee_container > iframe  li  {
+    display: none;
+}
 
 
 
@@ -437,14 +473,11 @@ main.bg-image p {
         background-color: #1873b5;
     }
 
-
     h2 {
         text-align: center;
     }
 
     img.hero {
-        position: relative;
-        bottom: -2.5vw;
     }
     
     .calendar-desktop {
@@ -459,6 +492,15 @@ main.bg-image p {
         padding: 13px 5px 13px 5px;
 
     }
+    
+    .grid-container {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    /* padding: 10px;*/
+}
 
 
 }
@@ -475,9 +517,19 @@ main.bg-image p {
         height: 60vh;
     }
 
+    img.hero {
+/*        bottom: 2px;*/
+/*        height: 100%;*/
+    }
+
+
+    img {
+        transform: none !important;
+      }
+    
     nav {
         margin: 0;
-        padding: 0px;
+        padding: 0;
         box-shadow: 0px 16px 25px -15px rgb(0, 55, 95);
         z-index: 10;
     }
@@ -488,21 +540,24 @@ main.bg-image p {
     }
 
     nav li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
         height: 38px;
         background-color: #1873b5;
         padding: 0;
         margin: 0;
         border-radius: 0;
         width: 25%;
-        border-left: solid 0px white;
-        
     }
     
     nav a {
         color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     footer {
@@ -517,6 +572,23 @@ main.bg-image p {
     header h1 {
         font-size: 1.8rem;
     }
+
+}
+
+/* svery mall screen breakpoint */
+@media screen and (max-width:450px) {
+    .grid-container {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        grid-template-columns: 1fr;
+        /* padding: 10px;*/
+    }
+    
+    .grid-item {
+        object-fit: cover;
+        
+    }
+
 
 }
 

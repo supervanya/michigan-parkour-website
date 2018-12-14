@@ -2,16 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        
+        
+        a.grid-item > img  {
+            height: 300px;
+        }
+    
+        @media screen and (max-width:450px) {
+            a.grid-item > img  {
+                height: 120px;
+                width: 600px;                
+                }
+            }
+        }
+        
+        
+    
+    </style>
+    
     <title>Locations | Michigan Parkour</title>
 </head>
 
 <body class="bg-image-maps">
+   <a class="skipnav" tabindex='1' href="#main">Skip to Content (Press Enter)</a>
+   
     <nav>
         <ul>
             <li><a href="index.html">About us</a></li>
@@ -27,7 +53,7 @@
     </header>
 
     <main class="bg-image">
-       <h2>Google Map</h2>
+       <h2 id="main">Google Map</h2>
        <p>We will have google map with all of out training spots here soon</p>
        
        
@@ -35,9 +61,13 @@
             <iframe  src="https://www.google.com/maps/d/u/0/embed?mid=1JWekLFZfuIIUvtVzpKKfUQK-a0qvSDTB"></iframe>
         </section>
         
-        <img class="fill" src="https://via.placeholder.com/700x400" alt="temporary placeholder during construction">
-        <img class="fill" src="images/locations/flint1.jpg" alt="image of flint grand fountain">
-        <img class="fill" src="images/locations/flint2.jpg" alt="another image of flint grand fountain with water colored green for St. Patrick's Day">
+        <div class="grid-container">
+                
+            <a href="images/locations/flint1.jpg" data-lightbox="parkour-training-spots" data-title="Parkour Traning Spot in Flint (Grand Fountain)" class="grid-item"><img src="images/locations/flint1.jpg" alt="image of flint grand fountain"></a>
+            <a href="images/locations/flint2.jpg" data-lightbox="parkour-training-spots" data-title="Parkour Traning Spot in Flint (Grand Fountain)" class="grid-item"><img src="images/locations/flint2.jpg" alt="another image of flint grand fountain with water colored green for St. Patrick's Day"></a>
+            <a href="images/locations/flint3.jpg" data-lightbox="parkour-training-spots" data-title="Parkour Traning Spot in Flint (Grand Fountain)" class="grid-item"><img src="images/locations/flint3.jpg" alt="another image of flint grand fountain with water colored green for St. Patrick's Day"></a>
+        
+        </div>
         
         
         
@@ -50,6 +80,10 @@
             <a class="test-link" href="https://twitter.com/michiganparkour" aria-label='instagram link'><i class="fab fa-twitter-square fa-2x"></i></a>
         </div>
     </footer>
+
+    <!--  lightbox JQ + JS  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/lightbox.js"></script>
 
 </body>
 </html>
